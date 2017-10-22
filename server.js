@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var router = express.Router();
 var appRoutes = require('./backEnd/routes')(router);
 
-mongoose.connect('mongodb://localhost:27017/Ssc', {useMongoClient: true}, function(err) {
+mongoose.connect('mongodb://sp001:iamsp001@ds227555.mlab.com:27555/ssc', {useMongoClient: true}, function(err) {
   mongoose.Promise = global.Promise;
   if (err) {
     console.log('not ok...');
