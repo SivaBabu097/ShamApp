@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Class Page</title>
+    <link rel="icon" href="D://ima/favIcon.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js" charset="utf-8"></script>
+    <script src="app/app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="mym" ng-controller="myc as m">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header bar">
+          <button class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-star-empty"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNav">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"> Home </a></li>
+            <li><a href="/dashboard1"> DashBoard1 </a></li>
+            <li><a href="/dashboard2"> DashBoard2 </a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"> DropDown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"> Demo-1 </a></li>
+                <li><a href="#"> Demo-2 </a></li>
+                <li><a href="#"> Demo-3 </a></li>
+                <li><a href="#"> Demo-4 </a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> contact </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <ng-view> </ng-view>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+  </body>
+</html>

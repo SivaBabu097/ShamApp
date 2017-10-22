@@ -1,0 +1,38 @@
+.bg1 {
+  background-color: #f1f1f1;
+}
+.navbar {
+  background-color: #f4511e;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f4511e !important;
+  background-color: #fff !important;
+}
+.navbar a {
+  color: black !important;
+}
+.form-control {
+  border-radius: 0;
+  margin: 10px 0 10px 0;
+}
+.btn {
+  border-radius: 0;
+  margin: 10px 0 10px 0;
+  padding: 6px 30px;
+}
+.main, .tab {
+  text-align: center;
+  margin: 80px 0 20px 0;
+}
+.bottom a {
+  margin: 0 25px 0 25px;
+}
+footer {
+  background-color: green;
+  padding: 15px;
+}

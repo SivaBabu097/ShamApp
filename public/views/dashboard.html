@@ -1,0 +1,38 @@
+<div class="container-fluid bg1">
+  <div class="row">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8 tab">
+      <h1> DashBoard1 </h1>
+      <hr>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Place</th>
+                <th>Qualification</th>
+                <th>JobType</th>
+                <th>Referrer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="h in m.hi">
+                <td>1</td>
+                <td>{{h.name}}</td>
+                <td>{{h.place}}</td>
+                <td>{{h.qualification}}</td>
+                <td>{{h.jobType}}</td>
+                <td>{{h.referrer}}</td>
+              </tr>
+            </tbody>
+          </table>
+       </div>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+  </div>
+</div>
