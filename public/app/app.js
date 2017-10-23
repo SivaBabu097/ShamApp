@@ -10,6 +10,9 @@ var app = angular.module('mym', ['ngRoute']);
         .when('/dashboard2', {
           templateUrl: 'views/dashboard2.html'
         })
+        .when('/contact', {
+          templateUrl: 'views/contact.html'
+        })
         .otherwise({redirectTo: '/'});
         $locationProvider.html5Mode({
            enabled : true,
