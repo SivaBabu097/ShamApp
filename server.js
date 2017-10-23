@@ -4,15 +4,16 @@ var port = process.env.PORT || 3000;
 var path = require('path');
 var bp = require('body-parser');
 var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 var router = express.Router();
 var appRoutes = require('./backEnd/routes')(router);
 
 mongoose.connect('mongodb://sp001:iamsp001@ds227555.mlab.com:27555/ssc', {useMongoClient: true}, function(err) {
-  mongoose.Promise = global.Promise;
+  //mongoose.Promise = bluebird;
   if (err) {
     console.log('not ok...');
   } else {
-    console.log('ok mari...');
+    console.log('ok mari ok...');
   }
 });
 

@@ -22,22 +22,22 @@ var app = angular.module('mym', ['ngRoute']);
       $http.get('/dash').then(function(data) {
         app.hi = data.data;
         console.log(app.hi);
-        var jt = [1,2,3,4,5,6,7,8];
-        app.row = [{jobType: 1, a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 2, a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 3, a1: 0, b1: 0, c1: 0, d1: 0},
-                       {jobType: 4, a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 5, a1: 0, b1: 0, c1: 0, d1: 0},
-                       {jobType: 6, a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 7, a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 8, a1: 0, b1: 0, c1: 0, d1: 0}];
+        var jt = ['job1','job2','job3','job4','job5','job6','job7','job8',];
+        app.row = [{jobType: 'job1', a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 'job2', a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 'job3', a1: 0, b1: 0, c1: 0, d1: 0},
+                       {jobType: 'job4', a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 'job5', a1: 0, b1: 0, c1: 0, d1: 0},
+                       {jobType: 'job6', a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 'job7', a1: 0, b1: 0, c1: 0, d1: 0},{jobType: 'job8', a1: 0, b1: 0, c1: 0, d1: 0}];
         for(i=0; i<app.hi.length; i++) {
           for(j=0; j<jt.length; j++) {
-            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'one') {
+            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'SatyaNarayana') {
               app.row[j].a1 = app.row[j].a1 + 1;
             }
-            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'two') {
+            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'Venkat') {
               app.row[j].b1 = app.row[j].b1 + 1;
             }
-            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'three') {
+            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'Jyothi') {
               app.row[j].c1 = app.row[j].c1 + 1;
             }
-            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'four') {
+            if(app.hi[i].jobType == jt[j] && app.hi[i].referrer == 'Bhavani') {
               app.row[j].d1 = app.row[j].d1 + 1;
             }
           }
