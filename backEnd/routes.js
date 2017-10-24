@@ -28,5 +28,19 @@ module.exports = function(router) {
     });
   });
 
+  router.delete('/users/:id', function(req, res) {
+    var id = req.params.id;
+    console.log(id);
+    User.findByIdAndRemove({_id: req.params.id}).exec(function(err, xx) {
+      if (err) throw err;
+      if(!xx) {
+        res.send('no id');
+      }
+      if (xx) {
+      res.send('deleted');
+      }
+    });
+  });
+
   return router;
 }

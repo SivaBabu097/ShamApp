@@ -58,5 +58,12 @@ var app = angular.module('mym', ['ngRoute']);
           $location.path('/dashboard1');
           refresh();
         });
+      };
+
+      this.remove = function(id) {
+        console.log('test remove..' + id);
+        $http.delete('/users/' + id).then(function(data) {
+          refresh();
+        });
       }
     });
