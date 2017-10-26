@@ -65,5 +65,24 @@ var app = angular.module('mym', ['ngRoute']);
         $http.delete('/users/' + id).then(function(data) {
           refresh();
         });
-      }
+      };
+
+      this.edit = function(id) {
+        console.log('testing edit..' + id);
+        $http.get('/users/' + id).then(function(data) {
+          app.modelData = data.data;
+          console.log(app.modelData);
+          app.md = app.modelData;
+      //    console.log(app.md);
+        });
+      };
+
+      this.update = function() {
+        console.log(app.md._id);
+        var id = app.md._id;
+        $http.put('/users/' + id, app.md).then(function(data) {
+          refresh();
+          console.log(data.data);
+        });
+      };
     });

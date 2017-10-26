@@ -42,5 +42,53 @@ module.exports = function(router) {
     });
   });
 
+  router.get('/users/:id', function(req, res) {
+    var id = req.params.id;
+    console.log(id);
+    User.findById({_id: id}).exec(function(err, dd) {
+      res.send(dd);
+    });
+  });
+
+  router.put('/users/:id', function(req,res) {
+    var id = req.params.id;
+    var user = new User();
+    console.log(id);
+    User.findById({_id: id}).exec(function(err, db) {
+      if (err) throw err;
+      else {
+        user.update({_id: id}, {$set: {
+        db.name = req.body.name;
+        db.place = req.body.place;
+        db.qualification = req.body.qualification;
+        db.jobType = req.body.jobType;
+        db.referrer = req.body.referrer;
+      }
+    }).exec(function(err, dt) {
+      res.send('updated..');
+    });
+      }
+    });
+  });
+
+  /*
+  router.put('/users/:id', function(req,res) {
+    var id = req.params.id;
+    var user = new User();
+    console.log(id);
+    User.update({_id: id}, {$set: {
+      user.name = req.body.name;
+      user.place = req.body.place;
+      user.qualification = req.body.qualification;
+      user.jobType = req.body.jobType;
+      user.referrer = req.body.referrer;
+    }
+    }).exec(function(err, db) {
+      if (err) throw err;
+      res.send('updated...');
+    });
+  });
+  */
+
   return router;
 }
