@@ -5,6 +5,13 @@
     </div>
     <div class="col-sm-8 tab">
       <h1> DashBoard1 </h1>
+      <select class="form-control" ng-model="mentor">
+        <option value=""> Select Mentor </option>
+        <option value="satyanarayana"> Satyanarayana </option>
+        <option value="venkat"> Venkat </option>
+        <option value="jyothi"> Jyothi </option>
+        <option value="bhavani"> Bhavani </option>
+      </select>
       <hr>
         <div class="table-responsive">
           <table class="table">
@@ -21,7 +28,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="h in m.hi">
+              <tr ng-repeat="h in m.hi | filter: mentor">
                 <td>{{$index + 1}}</td>
                 <td>{{h.name}}</td>
                 <td>{{h.place}}</td>

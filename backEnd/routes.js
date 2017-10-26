@@ -50,7 +50,7 @@ module.exports = function(router) {
     });
   });
 
-  router.put('/users/:id', function(req,res) {
+ /* router.put('/users/:id', function(req,res) {
     var id = req.params.id;
     var user = new User();
     console.log(id);
@@ -70,6 +70,7 @@ module.exports = function(router) {
       }
     });
   });
+*/
 
   /*
   router.put('/users/:id', function(req,res) {
